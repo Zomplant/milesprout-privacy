@@ -1,6 +1,6 @@
 # MileSprout Privacy Policy
 
-Last updated: October 22, 2026
+Last updated: October 24, 2026
 
 MileSprout is an Android mileage-tracking app published by ZomPlant Apps. This policy explains what information the app uses, what stays on your device, and when information may reach another service. For privacy questions, contact MileSprout@mail.com.
 
@@ -16,9 +16,9 @@ Saved GPS routes can be previewed without downloading map tiles. If you choose O
 
 ## Optional Google Play subscriptions
 
-Google Play handles subscription purchases and payment information. If subscriptions are available and you choose one, MileSprout sends the Google Play purchase token over HTTPS to its subscription verification service. That service checks the token with the Google Play Developer API and returns the subscription status, expiry, and verification time to the app. The verification request does not include your trip records or GPS route points.
+Google Play handles subscription purchases and payment information. MileSprout communicates directly with Google Play Billing to retrieve offers, complete and acknowledge purchases, and check subscription ownership. The app checks Google's purchase signatures on your device. MileSprout does not send purchase tokens to a ZomPlant Apps verification server. Subscription checks do not include your trip records or GPS route points.
 
-MileSprout stores a subscription-status record on your device, including a SHA-256 digest of the token rather than the raw token. The verification service is not designed to keep a purchase-token database. Its hosting provider and Google may process technical request information, such as network addresses and security logs, to operate their services. Contact us for questions about that processing or deletion. Subscription management and cancellation are available through Google Play.
+MileSprout stores a subscription-status record on your device, including a SHA-256 digest of the purchase token rather than the raw token, the time of the last successful check, and an offline-access deadline. Previously confirmed access can continue for up to seven days without another successful check. Google processes payment and purchase information under its own privacy practices. Subscription management and cancellation are available through Google Play.
 
 ## Exports and sharing
 
@@ -34,7 +34,7 @@ To remove the app's remaining local storage, use Android's Clear storage control
 
 ## Security and other services
 
-MileSprout keeps its app data in Android's private app storage. Its optional map requests and subscription verification requests use HTTPS. Exports and shared copies may receive different protection depending on where you save or send them. MileSprout does not use trip or route records for advertising.
+MileSprout keeps its app data in Android's private app storage. Its optional map requests use HTTPS, and Google Play handles billing communications. Exports and shared copies may receive different protection depending on where you save or send them. MileSprout does not use trip or route records for advertising.
 
 MileSprout is intended for people recording driving mileage and is not directed to children. We do not knowingly seek information from children through the app.
 
